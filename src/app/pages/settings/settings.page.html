@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="state-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Loading settings...</p>
+  </div>
+
+  <!-- Settings Content -->
+  <div *ngIf="!isLoading && preferences" class="settings-container">
+    <!-- Preferences Section -->
+    <div class="section">
+      <h2 class="section-title">Preferences</h2>
+      
+      <ion-list lines="full" class="settings-list">
+        <!-- Interests -->
+        <ion-item button (click)="editInterests()" detail="true">
+          <ion-icon name="heart-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <h3>Interests</h3>
+            <p>{{ preferences.selectedInterests.length }} selected</p>
+          </ion-label>
+        </ion-item>
+
+        <!-- Depth Preference -->
+        <ion-item>
+          <ion-icon name="layers-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <h3>Explanation Depth</h3>
+            <p>How detailed should explanations be</p>
+          </ion-label>
+          <ion-select
+            [(ngModel)]="preferences.depth"
+            (ionChange)="onDepthChange($event)"
+            interface="popover"
+            slot="end"
+          >
+            <ion-select-option value="light">Light</ion-select-option>
+            <ion-select-option value="normal">Normal</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <!-- Audio Enabled -->
+        <ion-item>
+          <ion-icon name="volume-high-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <h3>Audio Playback</h3>
+            <p>Enable text-to-speech for explanations</p>
+          </ion-label>
+          <ion-toggle
+            [(ngModel)]="preferences.audioEnabled"
+            (ionChange)="onAudioToggle($event)"
+            slot="end"
+          ></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!-- Data Section -->
+    <div class="section">
+      <h2 class="section-title">Data</h2>
+      
+      <ion-list lines="full" class="settings-list">
+        <!-- Clear Data -->
+        <ion-item button (click)="clearData()" detail="false">
+          <ion-icon name="trash-outline" slot="start" color="danger"></ion-icon>
+          <ion-label color="danger">
+            <h3>Clear All Data</h3>
+            <p>Delete all history and preferences</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!-- About Section -->
+    <div class="section">
+      <h2 class="section-title">About</h2>
+      
+      <ion-list lines="full" class="settings-list">
+        <!-- About -->
+        <ion-item button (click)="showAbout()" detail="true">
+          <ion-icon name="information-circle-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <h3>About Curio</h3>
+            <p>Version {{ appVersion }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p class="footer-text">
+        Learn intentionally, one concept at a time.
+      </p>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,131 @@
+.state-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+  text-align: center;
+
+  ion-spinner {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: var(--ion-color-medium);
+  }
+}
+
+.settings-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem 0;
+
+  .section {
+    margin-bottom: 2rem;
+
+    .section-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--ion-color-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .settings-list {
+      background: white;
+      border-radius: 16px;
+      margin: 0 0.5rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+      ion-item {
+        --padding-start: 1rem;
+        --padding-end: 1rem;
+        --inner-padding-end: 0;
+        --min-height: 64px;
+
+        ion-icon[slot="start"] {
+          font-size: 1.5rem;
+          margin-right: 1rem;
+        }
+
+        ion-label {
+          h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--ion-color-dark);
+          }
+
+          p {
+            font-size: 0.875rem;
+            color: var(--ion-color-medium);
+            margin-top: 0.25rem;
+          }
+
+          &[color="danger"] {
+            h3, p {
+              color: var(--ion-color-danger);
+            }
+          }
+        }
+
+        ion-select {
+          min-width: 100px;
+          text-align: right;
+          font-weight: 500;
+        }
+
+        ion-toggle {
+          --handle-width: 26px;
+          --handle-height: 26px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+
+    .footer-text {
+      font-size: 0.9375rem;
+      color: var(--ion-color-medium);
+      font-style: italic;
+      line-height: 1.5;
+    }
+  }
+}
+
+// Mobile responsive adjustments
+@media (max-width: 576px) {
+  .settings-container {
+    .section {
+      .settings-list {
+        border-radius: 0;
+        margin: 0;
+
+        ion-item {
+          ion-icon[slot="start"] {
+            font-size: 1.25rem;
+            margin-right: 0.75rem;
+          }
+
+          ion-label {
+            h3 {
+              font-size: 0.9375rem;
+            }
+
+            p {
+              font-size: 0.8125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

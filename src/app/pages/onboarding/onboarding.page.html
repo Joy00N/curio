@@ -1,0 +1,43 @@
+<ion-content class="ion-padding">
+  <div class="onboarding-container">
+    <div class="header">
+      <h1>Pick a few interests</h1>
+      <p class="subtitle">Choose at least 3 topics you'd like to learn about</p>
+    </div>
+
+    <div class="interests-grid">
+      <ion-chip
+        *ngFor="let interest of availableInterests"
+        [outline]="!isSelected(interest)"
+        [color]="isSelected(interest) ? 'primary' : 'medium'"
+        (click)="toggleInterest(interest)"
+        class="interest-chip"
+      >
+        <ion-label>{{ interest }}</ion-label>
+      </ion-chip>
+    </div>
+
+    <div class="selected-count" *ngIf="selectedInterests.size > 0">
+      {{ selectedInterests.size }} selected
+      <span *ngIf="selectedInterests.size < 3" class="min-required">
+        ({{ 3 - selectedInterests.size }} more needed)
+      </span>
+    </div>
+
+    <ion-text color="danger" *ngIf="errorMessage">
+      <p class="error-message">{{ errorMessage }}</p>
+    </ion-text>
+
+    <div class="actions">
+      <ion-button
+        expand="block"
+        size="large"
+        (click)="continue()"
+        [disabled]="!canContinue() || isLoading"
+      >
+        <ion-spinner *ngIf="isLoading" name="crescent"></ion-spinner>
+        <span *ngIf="!isLoading">Continue</span>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

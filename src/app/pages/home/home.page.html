@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Curio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="home-container">
+    <!-- Today's Topic Card -->
+    <div class="section">
+      <h2 class="section-title">Today's Topic</h2>
+      
+      <!-- Loading State -->
+      <ion-card *ngIf="isLoadingToday && !todayTopic" class="topic-card loading">
+        <ion-card-content>
+          <ion-spinner name="crescent"></ion-spinner>
+          <p>Loading today's topic...</p>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Error State -->
+      <ion-card *ngIf="errorMessage && !todayTopic" class="topic-card error">
+        <ion-card-content>
+          <ion-text color="danger">
+            <p>{{ errorMessage }}</p>
+          </ion-text>
+          <ion-button expand="block" fill="outline" (click)="retryToday()">
+            Retry
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Today's Topic Content -->
+      <ion-card *ngIf="todayTopic && !showAlternatives" class="topic-card">
+        <ion-card-header>
+          <ion-card-subtitle>{{ todayTopic.category }}</ion-card-subtitle>
+          <ion-card-title>{{ todayTopic.topic }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="teaser">{{ todayTopic.teaser }}</p>
+          
+          <div class="actions">
+            <ion-button
+              expand="block"
+              (click)="teachMeToday()"
+              [disabled]="isLoadingToday"
+            >
+              <ion-spinner *ngIf="isLoadingToday" name="crescent" slot="start"></ion-spinner>
+              <span>Teach me this</span>
+            </ion-button>
+            
+            <ion-button
+              expand="block"
+              fill="outline"
+              (click)="pickAnother()"
+              [disabled]="isLoadingToday"
+            >
+              Pick another
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Alternative Topics -->
+      <div *ngIf="showAlternatives" class="alternatives">
+        <div class="alternatives-header">
+          <h3>Or try one of these:</h3>
+          <ion-button fill="clear" size="small" (click)="cancelAlternatives()">
+            Cancel
+          </ion-button>
+        </div>
+        
+        <ion-card
+          *ngFor="let alt of alternativeTopics"
+          class="topic-card alternative"
+          (click)="selectAlternative(alt)"
+        >
+          <ion-card-header>
+            <ion-card-subtitle>{{ alt.category }}</ion-card-subtitle>
+            <ion-card-title>{{ alt.topic }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="teaser">{{ alt.teaser }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+
+    <!-- User Query Section -->
+    <div class="section">
+      <h2 class="section-title">Or learn about anything</h2>
+      
+      <div class="query-input">
+        <ion-item lines="none" class="input-item">
+          <ion-input
+            [(ngModel)]="userQuery"
+            placeholder="Type a concept or question..."
+            (keyup.enter)="teachMeQuery()"
+            [disabled]="isLoadingQuery"
+          ></ion-input>
+        </ion-item>
+        
+        <ion-button
+          (click)="teachMeQuery()"
+          [disabled]="!userQuery.trim() || isLoadingQuery"
+          class="query-button"
+        >
+          <ion-spinner *ngIf="isLoadingQuery" name="crescent" slot="start"></ion-spinner>
+          <span>Teach me this</span>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

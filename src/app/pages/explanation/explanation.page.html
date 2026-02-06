@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Explanation</ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="entry" (click)="toggleFavorite()">
+        <ion-icon
+          slot="icon-only"
+          [name]="entry.isFavorite ? 'heart' : 'heart-outline'"
+          [color]="entry.isFavorite ? 'danger' : ''"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="state-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Generating explanation...</p>
+  </div>
+
+  <!-- Error State -->
+  <div *ngIf="errorMessage && !isLoading" class="state-container">
+    <ion-icon name="alert-circle-outline" color="danger" size="large"></ion-icon>
+    <ion-text color="danger">
+      <p>{{ errorMessage }}</p>
+    </ion-text>
+    <ion-button expand="block" fill="outline" (click)="retry()">
+      Retry
+    </ion-button>
+  </div>
+
+  <!-- Content -->
+  <div *ngIf="entry && !isLoading" class="explanation-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="category-badge" *ngIf="entry.category">
+        {{ entry.category }}
+      </div>
+      <h1 class="topic-title">{{ entry.topic }}</h1>
+      <p class="teaser">{{ entry.teaser }}</p>
+      <p class="date">{{ formatDate(entry.date) }}</p>
+    </div>
+
+    <!-- Audio Controls -->
+    <ion-card *ngIf="isTTSAvailable && audioEnabled" class="audio-controls">
+      <ion-card-content>
+        <div class="controls-row">
+          <div class="playback-buttons">
+            <ion-button
+              *ngIf="!isPlaying || isPaused"
+              fill="solid"
+              size="large"
+              (click)="playAudio()"
+            >
+              <ion-icon slot="icon-only" name="play"></ion-icon>
+            </ion-button>
+            
+            <ion-button
+              *ngIf="isPlaying && !isPaused"
+              fill="solid"
+              size="large"
+              (click)="pauseAudio()"
+            >
+              <ion-icon slot="icon-only" name="pause"></ion-icon>
+            </ion-button>
+            
+            <ion-button
+              fill="outline"
+              size="large"
+              (click)="stopAudio()"
+              [disabled]="!isPlaying"
+            >
+              <ion-icon slot="icon-only" name="stop"></ion-icon>
+            </ion-button>
+          </div>
+
+          <div class="speed-controls">
+            <ion-chip
+              *ngFor="let rate of availableRates"
+              [outline]="selectedRate !== rate"
+              [color]="selectedRate === rate ? 'primary' : 'medium'"
+              (click)="changeSpeed(rate)"
+            >
+              <ion-label>{{ rate }}x</ion-label>
+            </ion-chip>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Content Sections -->
+    <div class="content-sections">
+      <!-- Section 1: ELI7 -->
+      <div class="section">
+        <div class="section-header">
+          <ion-icon name="bulb-outline" color="primary"></ion-icon>
+          <h2>Explain Like I'm 7</h2>
+        </div>
+        <p class="section-content">{{ entry.eli7 }}</p>
+      </div>
+
+      <!-- Section 2: One Level Deeper -->
+      <div class="section">
+        <div class="section-header">
+          <ion-icon name="layers-outline" color="primary"></ion-icon>
+          <h2>One Level Deeper</h2>
+        </div>
+        <p class="section-content">{{ entry.deeper }}</p>
+      </div>
+
+      <!-- Section 3: Real-World Example -->
+      <div class="section">
+        <div class="section-header">
+          <ion-icon name="earth-outline" color="primary"></ion-icon>
+          <h2>Real-World Example</h2>
+        </div>
+        <p class="section-content">{{ entry.example }}</p>
+      </div>
+
+      <!-- Section 4: Why This Matters -->
+      <div class="section">
+        <div class="section-header">
+          <ion-icon name="star-outline" color="primary"></ion-icon>
+          <h2>Why This Matters</h2>
+        </div>
+        <p class="section-content">{{ entry.whyItMatters }}</p>
+      </div>
+
+      <!-- Reflection Question -->
+      <div class="reflection">
+        <div class="reflection-header">
+          <ion-icon name="help-circle-outline" color="secondary"></ion-icon>
+          <h3>Reflect</h3>
+        </div>
+        <p class="reflection-question">{{ entry.reflectionQuestion }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
