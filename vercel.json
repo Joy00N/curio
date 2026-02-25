@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "installCommand": "echo 'Skipping install — API uses only Node.js built-ins'",
-  "buildCommand": "",
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+  "framework": null,
+  "installCommand": "echo 'skip'",
+  "buildCommand": "echo 'skip'",
+  "outputDirectory": "",
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "@vercel/node@3"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
