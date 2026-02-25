@@ -3,7 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { StorageService } from '../../services/storage.service';
 import { RecommendationService } from '../../services/recommendation.service';
-import { UserPreferences } from '../../models';
+import { UserPreferences, AppLanguage, SUPPORTED_LANGUAGES, LanguageOption } from '../../models';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -19,6 +19,7 @@ export class SettingsPage implements OnInit {
 
   // Available options
   availableInterests: string[] = [];
+  supportedLanguages: LanguageOption[] = SUPPORTED_LANGUAGES;
 
   constructor(
     private storage: StorageService,
@@ -70,6 +71,24 @@ export class SettingsPage implements OnInit {
 
     this.preferences.audioEnabled = event.detail.checked;
     await this.savePreferences();
+  }
+
+  /**
+   * Update language preference
+   */
+  async onLanguageChange(event: any) {
+    if (!this.preferences) return;
+
+    this.preferences.language = event.detail.value as AppLanguage;
+    await this.savePreferences();
+  }
+
+  /**
+   * Get the native label for the current language
+   */
+  get currentLanguageLabel(): string {
+    const lang = this.supportedLanguages.find(l => l.code === this.preferences?.language);
+    return lang ? lang.nativeLabel : 'English';
   }
 
   /**

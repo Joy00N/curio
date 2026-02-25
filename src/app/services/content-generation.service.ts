@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, timeout } from 'rxjs/operators';
 import { GeneratedContent } from '../models';
+import { BundledContentService } from './bundled-content.service';
 import { environment } from '../../environments/environment';
 
 export interface GenerationRequest {
   topic: string;
   depth: 'light' | 'normal';
+  language: string;
   userInterests: string[];
   context: {
     date: string;
@@ -21,39 +23,71 @@ export interface GenerationRequest {
 export class ContentGenerationService {
   private readonly API_TIMEOUT = 30000; // 30 seconds
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private bundledContent: BundledContentService
+  ) {}
 
   /**
-   * Generate explanation content for a topic
+   * Generate explanation content for a topic.
+   *
+   * Hybrid strategy:
+   *   1. Check bundled content (offline, instant)
+   *   2. Call serverless API (custom topics, fresh content)
+   *   3. In dev mode, fall back to mock generator
+   *   4. In production, surface error to user
    */
   generate(request: GenerationRequest): Observable<GeneratedContent> {
-    if (environment.useMockGeneration) {
-      return this.generateMock(request);
+    // Step 1: Check bundled content first (instant, offline) — English only
+    if (!request.language || request.language === 'en') {
+      const bundled = this.bundledContent.getContent(request.topic);
+      if (bundled) {
+        return new Observable(observer => {
+          setTimeout(() => {
+            observer.next(bundled);
+            observer.complete();
+          }, 300);
+        });
+      }
     }
+
+    // Step 2: Call serverless API for custom / non-bundled topics
+    const headers = new HttpHeaders({
+      'x-api-key': environment.apiSecret
+    });
 
     return this.http.post<GeneratedContent>(
       `${environment.apiBaseUrl}/generate`,
-      request
+      request,
+      { headers }
     ).pipe(
       timeout(this.API_TIMEOUT),
       map(response => this.validateResponse(response)),
       catchError(error => {
-        console.error('Generation error:', error);
-        // Fallback to mock if API fails in dev mode
+        console.error('Generation API error:', error);
+
+        // Step 3: In development, fall back to mock
         if (!environment.production) {
-          console.warn('API failed, falling back to mock generation');
+          console.warn('API unavailable — falling back to mock generation');
           return this.generateMock(request);
         }
-        return throwError(() => new Error('Failed to generate content. Please try again.'));
+
+        // Step 4: In production, surface a user-friendly error
+        return throwError(() => new Error(
+          'Unable to generate content right now. Please check your connection and try again.'
+        ));
       })
     );
   }
+
+  // ───────────────────────────────────────────
+  // Mock generator (development & testing only)
+  // ───────────────────────────────────────────
 
   /**
    * Mock generator for development and testing
    */
   private generateMock(request: GenerationRequest): Observable<GeneratedContent> {
-    // Simulate network delay
     return new Observable(observer => {
       setTimeout(() => {
         const content = this.createMockContent(request.topic, request.depth);
@@ -68,8 +102,6 @@ export class ContentGenerationService {
    */
   private createMockContent(topic: string, depth: 'light' | 'normal'): GeneratedContent {
     const isLight = depth === 'light';
-    
-    // Create deterministic but varied content based on topic hash
     const hash = this.simpleHash(topic);
     const seed = hash % 10;
 
@@ -126,7 +158,6 @@ export class ContentGenerationService {
     ];
 
     const baseLength = isLight ? 80 : 120;
-    const variableLength = isLight ? 40 : 80;
 
     return {
       topic,
@@ -155,9 +186,6 @@ export class ContentGenerationService {
     };
   }
 
-  /**
-   * Generate teaser based on topic
-   */
   private generateTeaser(topic: string): string {
     const templates = [
       `Understanding ${topic} changes how you see the world`,
@@ -169,48 +197,40 @@ export class ContentGenerationService {
       `The key to understanding ${topic}`,
       `${topic} and why it's relevant today`
     ];
-    
+
     const hash = this.simpleHash(topic);
     const teaser = templates[hash % templates.length];
-    
     return teaser.length <= 140 ? teaser : teaser.substring(0, 137) + '...';
   }
 
-  /**
-   * Generate a paragraph of specified length
-   */
   private generateParagraph(start: string, targetLength: number, end: string): string {
     const filler = 'This concept is fundamental to understanding how different systems interact and influence each other in complex ways. When we examine it closely, we find patterns that repeat across various domains. These patterns help us make predictions and informed decisions. ';
-    
+
     let content = start;
     while (content.length < targetLength - end.length) {
       content += filler;
     }
     content += end;
-    
     return content;
   }
 
-  /**
-   * Simple hash function for deterministic mock data
-   */
   private simpleHash(str: string): number {
     let hash = 0;
     for (let i = 0; i < str.length; i++) {
       const char = str.charCodeAt(i);
       hash = ((hash << 5) - hash) + char;
-      hash = hash & hash; // Convert to 32-bit integer
+      hash = hash & hash;
     }
     return Math.abs(hash);
   }
 
-  /**
-   * Validate generated content response
-   */
+  // ───────────────────────────────────────────
+  // Response validation
+  // ───────────────────────────────────────────
+
   validateResponse(content: any): GeneratedContent {
     const errors: string[] = [];
 
-    // Check required fields
     if (!content.topic || typeof content.topic !== 'string') {
       errors.push('Missing or invalid topic');
     }
@@ -233,12 +253,10 @@ export class ContentGenerationService {
       errors.push('Missing or invalid reflectionQuestion');
     }
 
-    // Validate teaser length
     if (content.teaser && content.teaser.length > 140) {
       errors.push('Teaser exceeds 140 characters');
     }
 
-    // Validate reflection question ends with ?
     if (content.reflectionQuestion && !content.reflectionQuestion.trim().endsWith('?')) {
       errors.push('Reflection question must end with ?');
     }

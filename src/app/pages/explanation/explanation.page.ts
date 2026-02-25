@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StorageService } from '../../services/storage.service';
 import { TtsService } from '../../services/tts.service';
-import { TopicEntry } from '../../models';
+import { TopicEntry, SUPPORTED_LANGUAGES } from '../../models';
 
 @Component({
   selector: 'app-explanation',
@@ -14,6 +14,9 @@ export class ExplanationPage implements OnInit, OnDestroy {
   isLoading = true;
   errorMessage = '';
   
+  // Locale for date formatting
+  private userLocale = 'en-US';
+
   // Audio state
   isTTSAvailable = false;
   isPlaying = false;
@@ -41,9 +44,11 @@ export class ExplanationPage implements OnInit, OnDestroy {
       this.isLoading = false;
     }
 
-    // Check if audio is enabled in preferences
     const preferences = await this.storage.getPreferences();
     this.audioEnabled = preferences.audioEnabled;
+
+    const langOption = SUPPORTED_LANGUAGES.find(l => l.code === preferences.language);
+    this.userLocale = langOption?.locale || 'en-US';
   }
 
   ngOnDestroy() {
@@ -181,7 +186,7 @@ export class ExplanationPage implements OnInit, OnDestroy {
    */
   formatDate(isoDate: string): string {
     const date = new Date(isoDate);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString(this.userLocale, {
       year: 'numeric',
       month: 'long',
       day: 'numeric'

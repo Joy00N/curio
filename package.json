@@ -11,7 +11,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "ionic:build": "ionic build",
-    "ionic:serve": "ionic serve"
+    "ionic:serve": "ionic serve",
+    "api": "node api/server.js",
+    "dev": "npm run api & ng serve",
+    "generate-content": "node scripts/generate-content.js"
   },
   "private": true,
   "dependencies": {

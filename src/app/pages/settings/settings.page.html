@@ -58,6 +58,26 @@
             slot="end"
           ></ion-toggle>
         </ion-item>
+
+        <!-- Language -->
+        <ion-item>
+          <ion-icon name="language-outline" slot="start" color="primary"></ion-icon>
+          <ion-label>
+            <h3>Language</h3>
+            <p>Content will be generated in this language</p>
+          </ion-label>
+          <ion-select
+            [(ngModel)]="preferences.language"
+            (ionChange)="onLanguageChange($event)"
+            interface="popover"
+            slot="end"
+          >
+            <ion-select-option
+              *ngFor="let lang of supportedLanguages"
+              [value]="lang.code"
+            >{{ lang.nativeLabel }}</ion-select-option>
+          </ion-select>
+        </ion-item>
       </ion-list>
     </div>
 

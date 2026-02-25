@@ -35,6 +35,12 @@ ios/
 android/
 *.xcworkspace/
 
+# Angular cache
+.angular/
+
+# Claude
+.claude/
+
 # Environment variables
 .env
 .env.local

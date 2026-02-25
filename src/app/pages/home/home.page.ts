@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { StorageService } from '../../services/storage.service';
 import { RecommendationService } from '../../services/recommendation.service';
 import { ContentGenerationService } from '../../services/content-generation.service';
-import { TodayTopic, TopicEntry } from '../../models';
+import { TodayTopic, TopicEntry, SUPPORTED_LANGUAGES } from '../../models';
 
 @Component({
   selector: 'app-home',
@@ -165,15 +165,18 @@ export class HomePage implements OnInit {
 
     try {
       const preferences = await this.storage.getPreferences();
+      const langOption = SUPPORTED_LANGUAGES.find(l => l.code === preferences.language);
+      const locale = langOption?.locale || 'en-US';
 
       // Generate content
       const content = await this.contentGeneration.generate({
         topic,
         depth: preferences.depth,
+        language: preferences.language || 'en',
         userInterests: preferences.selectedInterests,
         context: {
           date: new Date().toISOString(),
-          locale: 'en-US'
+          locale
         }
       }).toPromise();
 

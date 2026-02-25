@@ -43,8 +43,8 @@ describe('RecommendationService', () => {
     it('should return topics for a valid category', () => {
       const topics = service.getTopicsForCategory('Technology');
       expect(topics.length).toBeGreaterThan(0);
-      expect(topics[0]).toHaveProperty('topic');
-      expect(topics[0]).toHaveProperty('teaser');
+      expect(topics[0].topic).toBeDefined();
+      expect(topics[0].teaser).toBeDefined();
     });
 
     it('should return at least 10 topics per category', () => {
@@ -78,9 +78,6 @@ describe('RecommendationService', () => {
 
     it('should return a topic with all required fields', async () => {
       const result = await service.chooseTopicForToday(['Technology', 'Science']);
-      expect(result).toHaveProperty('topic');
-      expect(result).toHaveProperty('teaser');
-      expect(result).toHaveProperty('category');
       expect(result.topic).toBeTruthy();
       expect(result.teaser).toBeTruthy();
       expect(result.category).toBeTruthy();
@@ -96,8 +93,8 @@ describe('RecommendationService', () => {
 
     it('should fallback to random category when no interests provided', async () => {
       const result = await service.chooseTopicForToday([]);
-      expect(result).toHaveProperty('topic');
-      expect(result).toHaveProperty('category');
+      expect(result.topic).toBeTruthy();
+      expect(result.category).toBeTruthy();
     });
 
     it('should select from user interests', async () => {
