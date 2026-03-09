@@ -1,0 +1,5 @@
+
+module CapacitorCommunityTextToSpeech.Swift {
+  header "CapacitorCommunityTextToSpeech-Swift.h"
+  requires objc
+}

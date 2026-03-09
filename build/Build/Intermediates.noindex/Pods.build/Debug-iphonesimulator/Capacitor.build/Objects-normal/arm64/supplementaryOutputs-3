@@ -1,0 +1,30 @@
+{
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgeDelegate.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeDelegate.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeDelegate.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeDelegate.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeDelegate.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeDelegate.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgeProtocol.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeProtocol.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeProtocol.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeProtocol.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeProtocol.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeProtocol.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgeViewController.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeViewController.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeViewController.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeViewController.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeViewController.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgeViewController.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin+getMethod.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgedPlugin+getMethod.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgedPlugin+getMethod.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgedPlugin+getMethod.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgedPlugin+getMethod.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPBridgedPlugin+getMethod.swiftdeps"
+  }
+}

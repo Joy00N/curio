@@ -1,0 +1,29 @@
+{
+  "" : {
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/CapacitorHaptics-primary.dia",
+    "emit-module-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/CapacitorHaptics-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/CapacitorHaptics-primary-emit-module.dia",
+    "pch" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/CapacitorHaptics-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/CapacitorHaptics-primary.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/haptics/ios/Plugin/Haptics.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.o",
+    "llvm-bc" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.bc",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics.swiftdeps",
+    "swiftmodule" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/Haptics~partial.swiftmodule"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/haptics/ios/Plugin/HapticsPlugin.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.o",
+    "llvm-bc" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.bc",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2.swiftdeps",
+    "swiftmodule" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorHaptics.build/Objects-normal/arm64/HapticsPlugin-5d492a8a1d3563509a191d0f36be48b2~partial.swiftmodule"
+  }
+}

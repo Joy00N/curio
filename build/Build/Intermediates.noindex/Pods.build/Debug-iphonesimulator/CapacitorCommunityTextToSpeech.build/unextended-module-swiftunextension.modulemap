@@ -1,0 +1,4 @@
+
+module CapacitorCommunityTextToSpeech.__Swift {
+  exclude header "CapacitorCommunityTextToSpeech-Swift.h"
+}

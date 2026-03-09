@@ -1,0 +1,29 @@
+{
+  "" : {
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/CapacitorCommunityTextToSpeech-primary.dia",
+    "emit-module-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/CapacitorCommunityTextToSpeech-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/CapacitorCommunityTextToSpeech-primary-emit-module.dia",
+    "pch" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/CapacitorCommunityTextToSpeech-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/CapacitorCommunityTextToSpeech-primary.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor-community/text-to-speech/ios/Plugin/TextToSpeech.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.o",
+    "llvm-bc" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.bc",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech.swiftdeps",
+    "swiftmodule" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeech~partial.swiftmodule"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor-community/text-to-speech/ios/Plugin/TextToSpeechPlugin.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.o",
+    "llvm-bc" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.bc",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300.swiftdeps",
+    "swiftmodule" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/Objects-normal/arm64/TextToSpeechPlugin-9473c4b281ade70dc31a33d5871f2300~partial.swiftmodule"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/Plugins/WebView.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebView.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebView.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebView.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebView.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebView.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/WKWebView+Capacitor.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WKWebView+Capacitor-9d691f4bf7f108e43306ce90736b1f46.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WKWebView+Capacitor-9d691f4bf7f108e43306ce90736b1f46.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WKWebView+Capacitor-9d691f4bf7f108e43306ce90736b1f46.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WKWebView+Capacitor-9d691f4bf7f108e43306ce90736b1f46.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WKWebView+Capacitor-9d691f4bf7f108e43306ce90736b1f46.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/WebViewAssetHandler.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewAssetHandler.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewAssetHandler.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewAssetHandler.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewAssetHandler.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewAssetHandler.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/WebViewDelegationHandler.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewDelegationHandler.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewDelegationHandler.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewDelegationHandler.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewDelegationHandler.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/WebViewDelegationHandler.swiftdeps"
+  }
+}

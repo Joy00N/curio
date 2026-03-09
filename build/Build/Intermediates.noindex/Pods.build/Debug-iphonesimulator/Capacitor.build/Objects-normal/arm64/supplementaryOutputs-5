@@ -1,0 +1,30 @@
+{
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPLog.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPLog.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPLog.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPLog.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPLog.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPLog.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPNotifications.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPNotifications.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPNotifications.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPNotifications.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPNotifications.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPNotifications.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin+LoadInstance.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPlugin+LoadInstance.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPlugin+LoadInstance.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPlugin+LoadInstance.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPlugin+LoadInstance.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPlugin+LoadInstance.swiftdeps"
+  },
+  "/Users/yoonhee/curio/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.swift" : {
+    "const-values" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPluginCall-12623e6d37b1174adab5fe0febddbe09.swiftconstvalues",
+    "dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPluginCall-12623e6d37b1174adab5fe0febddbe09.d",
+    "diagnostics" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPluginCall-12623e6d37b1174adab5fe0febddbe09.dia",
+    "object" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPluginCall-12623e6d37b1174adab5fe0febddbe09.o",
+    "swift-dependencies" : "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/Objects-normal/arm64/CAPPluginCall-12623e6d37b1174adab5fe0febddbe09.swiftdeps"
+  }
+}

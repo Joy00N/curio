@@ -1,0 +1,23 @@
+{
+  "version": 0,
+  "use-external-names": false,
+  "case-sensitive": false,
+  "roots": [{
+    "type": "directory",
+    "name": "/Users/yoonhee/curio/build/Build/Products/Debug-iphonesimulator/CapacitorCommunityTextToSpeech/CapacitorCommunityTextToSpeech.framework/Modules",
+    "contents": [{
+      "type": "file",
+      "name": "module.modulemap",
+      "external-contents": "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/unextended-module.modulemap",
+    }]
+    },
+    {
+    "type": "directory",
+    "name": "/Users/yoonhee/curio/build/Build/Products/Debug-iphonesimulator/CapacitorCommunityTextToSpeech/CapacitorCommunityTextToSpeech.framework/Headers",
+    "contents": [{
+      "type": "file",
+      "name": "CapacitorCommunityTextToSpeech-Swift.h",
+      "external-contents": "/Users/yoonhee/curio/build/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCommunityTextToSpeech.build/unextended-interface-header.h",
+    }]
+  }]
+}

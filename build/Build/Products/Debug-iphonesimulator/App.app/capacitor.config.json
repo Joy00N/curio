@@ -1,0 +1,13 @@
+{
+	"appId": "com.joy00n.curio",
+	"appName": "Curio",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "https"
+	},
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0
+		}
+	}
+}
